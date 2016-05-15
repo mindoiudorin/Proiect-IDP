@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.alljoyn.bus.sample.chat.LobyChannels">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:gravity="left">
+            <TextView
+                android:text="User Name:  "
+                />
+
+            <TextView
+                android:id="@+id/userNameLobby"
+                />
+        </TableRow>
+
+        <TableRow android:gravity="left">
+            <TextView
+                android:text="Host Channel Name:  "
+                />
+
+            <TextView
+                android:id="@+id/channelHostNameLobby"
+                />
+        </TableRow>
+        <TableRow android:gravity="left">
+            <TextView
+                android:text="Host Channel Status:  "
+                />
+
+            <TextView
+                android:id="@+id/channelHostStatusLobby"
+                />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/advertiseChannel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Start Advertise Channel"
+            android:onClick="AdvertiseChannelButtonClicked"
+             />
+
+        <Button
+            android:id="@+id/useJoin2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Join Channel"
+            android:onClick="JoinChannelButtonClicked"
+            />
+
+        <Button
+            android:id="@+id/resetChannelName"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Reset Channel Configuration"
+            android:onClick="ResetChannelButtonClicked"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Channels List"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myChannelList"
+        android:layout_gravity="right"
+        android:choiceMode="multipleChoice" />
+
+</LinearLayout>
